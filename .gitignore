@@ -8,3 +8,9 @@
 !assets/logo.jpg
 !assets/sunset.jpg
 !assets/geology.png
+!assets/team/
+!assets/team/*.jpg
+!netlify.toml
+!netlify/
+!netlify/functions/
+!netlify/functions/gawscit.js
