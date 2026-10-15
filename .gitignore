@@ -1,0 +1,10 @@
+# Netlify frontend only: keep Apps Script source and local tooling out of this repository.
+*
+!.gitignore
+!index.html
+!portal.js
+!communications.js
+!assets/
+!assets/logo.jpg
+!assets/sunset.jpg
+!assets/geology.png
