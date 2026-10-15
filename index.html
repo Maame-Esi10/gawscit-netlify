@@ -97,6 +97,11 @@ input,select,textarea{min-width:0;max-width:100%}.btn{max-width:100%;white-space
 .communication-choices{border:1px solid #ddd6ca;border-radius:8px;margin:24px 0;padding:20px}
 .communication-choices legend{font-weight:600;padding:0 8px}.communication-choices .check-label{font-weight:400}
 .member-identity{background:#f4f1ea;border-left:4px solid #b54c25;padding:18px 22px;margin:24px 0;overflow-wrap:anywhere}
+#toast{position:fixed;top:24px;left:50%;transform:translateX(-50%);z-index:1000;width:min(680px,calc(100vw - 32px));margin:0;box-shadow:0 12px 32px rgba(18,45,70,.28)}
+#busy{position:fixed;inset:0;z-index:1100;background:rgba(18,45,70,.58);color:#fff;display:flex;align-items:flex-start;justify-content:center;padding-top:clamp(90px,18vh,180px);font-weight:600;letter-spacing:.01em}
+#busy[hidden]{display:none}
+#busy:before{content:'';width:22px;height:22px;margin-right:12px;border:3px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:gawscit-spin .8s linear infinite}
+@keyframes gawscit-spin{to{transform:rotate(360deg)}}
 @media(max-width:750px){.gawscit-comms .grid{grid-template-columns:1fr}.gawscit-comms section{padding:16px}.gawscit-comms .actions button{width:100%}}
 </style></head><body><a href="#main" class="skip-link">Skip to content</a>
 <div class="topline"><span>GEOSCIENCE TRAINING · SOFTWARE CONSULTANCY</span><button data-action="about">About GAWSC I.T</button></div>
