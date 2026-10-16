@@ -106,6 +106,14 @@ input,select,textarea{min-width:0;max-width:100%}.btn{max-width:100%;white-space
 #dialog .dialog-busy{position:absolute!important;inset:0!important;z-index:20!important;display:flex!important;align-items:center!important;justify-content:center!important;margin:0!important;padding:24px!important;background:rgba(18,45,70,.78)!important;color:#fff!important;font-size:17px!important;font-weight:600!important}
 #dialog .dialog-busy:before{content:'';width:24px;height:24px;margin-right:12px;border:3px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:gawscit-spin .8s linear infinite}
 @keyframes gawscit-spin{to{transform:rotate(360deg)}}
+.admin-tabs{display:flex;align-items:center;gap:4px;padding:8px;border:1px solid var(--line);border-radius:8px;background:#f5f7f9;margin-bottom:34px}
+.admin-tabs button{padding:10px 14px;border-radius:5px;white-space:nowrap}
+.admin-tabs button.chosen{background:var(--navy);box-shadow:none;color:#fff}
+.programme-section{padding-top:28px}
+.past-heading{margin-top:42px}
+.programme-card{padding:0 0 24px;overflow:hidden}
+.programme-card>*:not(.programme-image){margin-left:24px;margin-right:24px}
+.programme-image{display:block;width:100%;height:190px;object-fit:cover;margin:0 0 22px}
 @media(max-width:750px){.gawscit-comms .grid{grid-template-columns:1fr}.gawscit-comms section{padding:16px}.gawscit-comms .actions button{width:100%}}
 </style></head><body><a href="#main" class="skip-link">Skip to content</a>
 <div class="topline"><span>GEOSCIENCE TRAINING · SOFTWARE CONSULTANCY</span><button data-action="about">About GAWSC I.T</button></div>
@@ -129,7 +137,7 @@ window.GAWSCIT_API_URL=window.GAWSCIT_API_URL||'/api/gawscit';
   var id=params.get('item')||'';
   window.GAWSCIT_ROUTE=/^(course|resource|program)$/.test(type)&&/^[A-Za-z0-9_-]{1,100}$/.test(id)
     ? {type:type,id:id}
-    : {};
+    : {communications:params.get('comms')==='1'};
 })();
 </script>
 <script src="communications.js"></script>
