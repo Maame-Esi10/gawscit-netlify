@@ -26,6 +26,15 @@ exports.handler = async function (event) {
     if (!response.ok) {
       return { statusCode: 502, body: JSON.stringify({ ok: false, error: 'The backend request failed.' }) };
     }
+    try {
+      JSON.parse(text);
+    } catch (error) {
+      return {
+        statusCode: 502,
+        headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' },
+        body: JSON.stringify({ ok: false, error: 'The Apps Script deployment returned a webpage instead of JSON. Check that APPS_SCRIPT_EXEC_URL ends in /exec and the deployment is accessible to Anyone.' })
+      };
+    }
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' },
